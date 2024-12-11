@@ -1,0 +1,67 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: auto; /* Mencegah scroll jika blur melebihi batas */
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Mengatur posisi tetap */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('cpkxa.png'); /* Ganti dengan URL gambar yang Anda inginkan */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Mengatur efek blur */
+    z-index: -1; /* Menempatkan di belakang konten */
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* Menempatkan konten di atas latar belakang */
+    padding: 20px;
+    min-height: 200vh; /* Membuat konten lebih tinggi dari viewport */
+    margin: 50px auto; /* Menambahkan jarak dari bagian atas halaman dan mengatur kontainer agar terpusat */
+    max-width: 700px; /* Mengatur lebar maksimum kontainer */
+    background-color: rgb(167, 154, 81); /* Menambahkan warna latar belakang putih */
+    border-radius: 8px; /* Menambahkan sudut yang melengkung (opsional) */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan (opsional) */
+    text-align: center; /* Memusatkan semua teks di dalam kontainer */
+}
+
+header {
+    background-color: rgba(219, 55, 33, 0.8); /* Warna latar belakang dengan transparansi */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+main {
+    margin: 20px 0;
+}
+
+.quotes {
+    padding: 20px;
+}
+
+blockquote {
+    font-size: 1.2em;
+    margin: 20px 0;
+    padding: 10px;
+    border-left: 5px solid #31ddc6;
+    color: #555555;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #666;
+}
